@@ -16,7 +16,7 @@ export default function App() {
       <Tab.Navigator
         initialRouteName="Feed"
         screenOptions={{
-          tabBarActiveTintColor: '#e91e63',
+          tabBarActiveTintColor: '#e91e64',
           headerShown: false,
         }}>
         <Tab.Screen
