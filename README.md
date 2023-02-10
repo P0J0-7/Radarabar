@@ -1,2 +1,4 @@
 # Radarabar
-# Radarabar
+
+Load with :
+npm install

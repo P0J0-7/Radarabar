@@ -1,47 +1,27 @@
 /* eslint-disable react-native/no-inline-styles */
 import React from 'react';
-import {Image, ScrollView, Text} from 'react-native';
+import {Text, ImageBackground,Image, View} from 'react-native';
+import Logo from '../images/Radarabar_logo_P.png';
+import Background from '../images/Background_color_main.png';
 
-const logo = {
-  uri: 'https://reactnative.dev/img/tiny_logo.png',
-  width: 64,
-  height: 64,
-};
+const LOGO = Image.resolveAssetSource(Logo).uri;
+const BACKGROUND = Image.resolveAssetSource(Background).uri;
 
 export default function Home() {
   return (
-    <ScrollView>
-      <Text style={{fontSize: 96}}>Scroll me plz</Text>
-      <Image source={logo} />
-      <Image source={logo} />
-      <Image source={logo} />
-      <Image source={logo} />
-      <Image source={logo} />
-      <Text style={{fontSize: 96}}>If you like</Text>
-      <Image source={logo} />
-      <Image source={logo} />
-      <Image source={logo} />
-      <Image source={logo} />
-      <Image source={logo} />
-      <Text style={{fontSize: 96}}>Scrolling down</Text>
-      <Image source={logo} />
-      <Image source={logo} />
-      <Image source={logo} />
-      <Image source={logo} />
-      <Image source={logo} />
-      <Text style={{fontSize: 96}}>What's the best</Text>
-      <Image source={logo} />
-      <Image source={logo} />
-      <Image source={logo} />
-      <Image source={logo} />
-      <Image source={logo} />
-      <Text style={{fontSize: 96}}>Framework around?</Text>
-      <Image source={logo} />
-      <Image source={logo} />
-      <Image source={logo} />
-      <Image source={logo} />
-      <Image source={logo} />
-      <Text style={{fontSize: 80}}>React Native</Text>
-    </ScrollView>
+    <View style={{padding: 20, backgroundColor: '#F8F8F8'}}>
+      <ImageBackground resizeMode="cover" source={{uri: BACKGROUND}}>
+        <Image style={{width: 300, height: 100}} source={{uri: LOGO}} />
+        <Text
+          style={{
+            padding: 10,
+            fontSize: 32,
+            color: 'black',
+            fontWeight: 'bold',
+          }}>
+          On sort où ce soir ?
+        </Text>
+      </ImageBackground>
+    </View>
   );
 }
